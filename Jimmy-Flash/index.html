@@ -19,39 +19,6 @@
         <button type="submit" onclick="makeCards();">Submit</button>
     </div>
     <div id="showingCards"></div>
-<script>
-    //function to make the cards
-    function makeCards(){
-        var elements = document.querySelectorAll('input')
-        console.log(elements);
-        console.log(elements.length);
-        var terms = []; //declare lists for terms and answer
-        var answer= []; 
-        for(var i = 0; i < elements.length; i++){
-            var check = elements[i].value;
-            if(i%2==0){
-                terms.push(check); //push terms into list
-            }
-            else{
-                answer.push(check); //push answers into list
-            }
-            console.log(check);
-        }
-        var div = document.getElementById('card_form'); // get the div element from the HTML 
-        while(div.firstChild){ //Remove all contents
-            div.removeChild(div.firstChild);
-        }
-        showCards(terms,answer);
-    }
-    // function to show the cards
-    function showCards(term,ans){
-        var str;
-        for(var i = 0; i<term.length;i++){
-        str += '<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><h1>'+term[i]+'</h1></div><div class="flip-card-back"><h1>'+ans[i]+'<h1></div></div></div>'
-        }        // combine strings for the cards 
-        document.getElementById('showingCards').innerHTML = str; //write into HTML
-    }
-
-</script>
+<script src="main.js"></script>
 </body>
 </html>
