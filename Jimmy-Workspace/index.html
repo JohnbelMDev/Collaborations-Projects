@@ -1,24 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Flash Cards</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" -->
+  <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Flash Cards</title>
+  <style>
+    .row {
+      margin: 0 auto;
+    }
+
+    .w3-display-left {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(0%, -50%);
+      -ms-transform: translate(-0%, -50%);
+    }
+
+    .w3-display-right {
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+    }
+
+    .w3-btn,
+    .w3-button {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .w3-btn,
+    .w3-button {
+      border: none;
+      display: inline-block;
+      padding: 8px 16px;
+      vertical-align: middle;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      background-color: inherit;
+      text-align: center;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="card_form">
+  <div class="form-group container">
+    <fieldset class="form-group col-xs-6">
+      <div id="card_form">
         <form id="flashCards">
-            Term:<input type="text" name="term" id="a1" placeholder="Enter Term">
-            Answer:<input type="text" name="answer" id="a2" placeholder="Enter Answer"><br>
-            Term:<input type="text" name="term" id="a3" placeholder="Enter Term">
-            Answer:<input type="text" name="answer" id="a4" placeholder="Enter Answer"><br>
-            Term:<input type="text" name="term" id="a5" placeholder="Enter Term">
-            Answer:<input type="text" name="answer" id="a6" placeholder="Enter Answer"><br>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Term</label>
+            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
+          </fieldset>
+          <fieldset class="form-group col-xs-6">
+            <label>Answer</label>
+            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
+          </fieldset>
         </form>
-        <button type="submit" onclick="makeCards();">Submit</button>
-    </div>
-    <div id="showingCards"></div>
-<script src="main.js"></script>
+        <a href="flashcards.html"><button type="submit" onclick="makeCards();">Submit</button></a>
+      </div>
+    </fieldset>
+  </div>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
