@@ -1,3 +1,33 @@
+.center {
+  margin: auto;
+  width: 90%;
+  border: 5px;
+  padding: 100px;
+}
+
+.TermContent-addRow {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+TermContent-addRowButton {
+    white-space: nowrap;
+}
+.TermContent-addRow>* {
+    position: absolute;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
   .flip-card {
     background-color: transparent;
@@ -7,7 +37,7 @@
     perspective: 1000px; /* Remove this if you don't want the 3D effect*/
     margin: 0 auto; /*center the cards*/
   }
-  
+
   /* This container is needed to position the front and back side */
   .flip-card-inner {
     position: relative;
@@ -17,12 +47,12 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
+
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-  
+
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
@@ -31,20 +61,20 @@
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
-  
+
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: #bbb;
     color: black;
   }
-  
+
   /* Style the back side */
   .flip-card-back {
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
   }
-  
+
 /* bootstrap CSS */
   input[type=text] {
     width: 100%;
@@ -56,5 +86,5 @@
 }
 
 .showingCards{
- display: inline-block; 
+ display: inline-block;
 }

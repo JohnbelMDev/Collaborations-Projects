@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<h2> hello there new one </h2>
-hello
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +57,38 @@ hello
   </style>
 </head>
 <body>
-  <div class="form-group container">
+  <div class="center">
+  <div style="float:left;">
+<!-- something here -->
+<label for="username"><b>First Name</b><span class="required"></span>    </label>
+<input id="user_first_name" name="FirstName" size="50" type="text"     placeholder="Term"  />
+</div>
+
+<div style="float:right;">
+<!-- something here -->
+<label for="name"><b>Last Name</b><span class="required"></span></label>
+<input id="user_last_name" name="LastName" size="50" type="text"     placeholder="answer"/>
+<a href="flashcards.html"><button type="submit" onclick="makeCards();">Submit</button></a>
+
+</div>
+</div>
+
+
+<div style="clear:both"></div>
+
+  <!-- <div style="float:left;">
+    <!-<input id="user_first_name" name="FirstName" size="30" type="text"     placeholder="First"  /> -->
+  <!-- </div> -->
+<!--
+  <div style="float:right;">
+    <label for="name"><b>Last Name*</b><span class="required"></span></label>
+    <input id="user_last_name" name="LastName" size="30" type="text"     placeholder="Last"/>
+  </div> -->
+  <!--<label><b>Full Name </b><span class="required">*</span></label><input     type="text" name="FirstName" class="field-divided" placeholder="First"     style="float:left" />;<input type="text" name="Surname" class="field-divided"     placeholder="Last" style="float:right"/> <p></p>-->
+  <!-- <label><b>Email </b><span class="required">*</span></label><input     type="email" name="Email" class="field-long" placeholder="Email" value="<?php     echo $_POST['Turnover']; ?>" />
+  <label><b>Phone </b><span class="required">*</span></label><input     type="number" name="Phone" class="field-divided" placeholder="Number" />
+  <label style="font-size:10px">only numbers, no special characters</label> -->
+  <!-- <div class="form-group container">
     <fieldset class="form-group col-xs-6">
       <div id="card_form">
         <form id="flashCards">
@@ -106,7 +136,7 @@ hello
         <a href="flashcards.html"><button type="submit" onclick="makeCards();">Submit</button></a>
       </div>
     </fieldset>
-  </div>
+  </div> -->
   <script src="js/main.js"></script>
 </body>
 
