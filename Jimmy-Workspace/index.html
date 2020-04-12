@@ -11,29 +11,31 @@
     .button_container {
       text-align: center
     }
+
     /* for the border content */
     .outside_container {
       margin: 0 auto;
     }
   </style>
 </head>
+
 <body>
-<div id="outside">
-  <div class="outside_container">
-    <div class="center">
-      <div style="float:left; width:45%;">
-        <!-- something here -->
-        <label for="username"><b>First Name</b><span class="required"></span> </label>
-        <input id="user_first_name" name="FirstName" size="50" type="text" placeholder="Term" />
-      </div>
-      <div style="float:right; width:45%;">
-        <!-- something here -->
-        <label for="name"><b>Last Name</b><span class="required"></span></label>
-        <input id="user_last_name" name="LastName" size="50" type="text" placeholder="answer" />
+  <div class="outside">
+    <div class="outside_container" style="">
+      <div class="center">
+        <div style="float:left; width:45%;">
+          <!-- something here -->
+          <label for="username"><b>First Name</b><span class="required"></span> </label>
+          <input id="user_first_name" name="FirstName" size="50" type="text" placeholder="Term" />
+        </div>
+        <div style="float:right; width:45%;">
+          <!-- something here -->
+          <label for="name"><b>Last Name</b><span class="required"></span></label>
+          <input id="user_last_name" name="LastName" size="50" type="text" placeholder="answer" />
+        </div>
       </div>
     </div>
   </div>
-</div>
   <div style="clear:both"></div>
   <div class="button_container">
     <a href="flashcards.html"><button class="this_button" type="submit" onclick="makeCards();">Submit</button></a>
@@ -42,17 +44,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
-      var phone_number_form_index=0;
-      $("#addField").click(function(){
-        phone_number_form_index++;
-        $(this).parent().before($("#outside").clone().attr("id","outside" + phone_number_form_index));
-        $("#outside" + phone_number_form_index).css("display","inline");
-        $("#phone_number_form" + phone_number_form_index + " :input").each(function(){
-            $(this).attr("name",$(this).attr("name") + phone_number_form_index);
-            $(this).attr("id",$(this).attr("id") + phone_number_form_index);
-            });
-          });
+        $("#addField").click(function() {
+          $( ".outside" ).append( '<div class="outside_container" style=""><div class="center"><div style="float:left; width:45%;"><label for="username"><b>First Name</b><span class="required"></span> </label><input id="user_first_name" name="FirstName" size="50" type="text" placeholder="Term" /></div><div style="float:right; width:45%;">        <label for="name"><b>Last Name</b><span class="required"></span></label><input id="user_last_name" name="LastName" size="50" type="text" placeholder="answer" /></div></div></div>' );
         });
+    });
   </script>
   <script src="js/main.js"></script>
 </body>
