@@ -19,18 +19,3 @@ function makeCards() {
     localStorage.setItem("question",JSON.stringify(t)); //store (TERMS) in the local storage to pass to the flashcard.HTML
     localStorage.setItem("answers",JSON.stringify(a)); //store (ANSWERS)
   }
-  var counter = 1;
-  var dynamicInput = [];
-
-  function addInput(){
-      var newdiv = document.createElement('div');
-      newdiv.id = dynamicInput[counter];
-      newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='text' name='myInputs[]'> <input type='button' value='-' onClick='removeInput("+dynamicInput[counter]+");'>";
-      document.getElementById('formulario').appendChild(newdiv);
-      counter++;
-  }
-
-    function removeInput(id){
-      var elem = document.getElementById(id);
-      return elem.parentNode.removeChild(elem);
-    }

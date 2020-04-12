@@ -1,3 +1,23 @@
+
+
+.button_container {
+    size: inherit;
+}
+.buttons {
+    margin: auto;
+    size: inherit;
+    width: 55px;
+}
+  .button_container {
+    text-align: center
+  }
+
+  /* for the border content */
+  .outside_container {
+    margin: 0 auto;
+  }
+
+
 .center {
   margin: auto;
   width: 100%;
@@ -5,6 +25,60 @@
   padding: 100px;
 }
 
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  background-color: blue;
+
+
+}
+.one {
+  grid-column: 2/.5 ;
+  grid-row: 1;
+  color:white;
+  font-size: 210%;
+}
+
+.top-left {
+  position: absolute;
+  top: 30px;
+  left: 90px;
+  color:white;
+}
+h3
+{
+  font-size: 210%;
+
+}
+
+.cc {
+  position: absolute;
+  top: 140px;
+  right: 1000px;
+  color:blue;
+
+}
+
+
+
+.center01 {
+  margin: auto;
+  width: 100%;
+  border: 5px;
+  padding: 200px;
+}
+.hidden {
+    display: none;
+}
+/* Bellow is completely unnecessary */
+* {
+	font-family: Arial;
+	font-size: 13px;
+}
 
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -45,6 +119,10 @@
   .flip-card-front {
     background-color: #bbb;
     color: black;
+    text-align:center;
+    padding: 70px;
+
+
   }
 
   /* Style the back side */
@@ -52,6 +130,8 @@
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
+    padding: 70px;
+
   }
 
 /* bootstrap CSS */

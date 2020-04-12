@@ -6,20 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        .button_container {
-            size: inherit;
-        }
-        .buttons {
-            margin: auto;
-            size: inherit;
-            width: 55px;
-        }
-    </style>
+
 </head>
 <body>
+  <div class="wrapper">
+  <div class="one" class="top"></div>
+  <h2 class="top-left">Flashcards</h2>
+
+</div>
+    <div class="cc">
+    <h3> Quiz Yourself </h3>
+
+  </div>
+  <div class="center">
+
     <div class="container">
         <div id="showingCards">
             <div class="flip-card col-lg-4 col-md-4 col-sm-6">
@@ -27,13 +30,14 @@
                     <div class="flip-card-front">
                         <h1 id="content_terms"></h1>
                     </div>
-                    <div class="flip-card-back">
+                    <div class="flip-card-back" >
                         <h1 id="content_answers">
                             <h1>
                     </div>
                 </div>
             </div>
         </div>
+      </div>
         <div class="button_container">
             <div class="buttons">
                 <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
@@ -41,30 +45,9 @@
             </div>
         </div>
     </div>
-    <script>
-        var storedTerms = JSON.parse(localStorage.getItem('question')); // (TERMS) get the terms and answers LIST from local storage
-        var storedAnswers = JSON.parse(localStorage.getItem('answers')); // (ANSWERS)
-        var slideIndex = 0;
-        var length = storedTerms.length;
-        console.log('Terms ' + storedTerms);
-        console.log('ANSWERS : ' + storedAnswers);
-        document.getElementById('content_terms').innerHTML = String(storedTerms[0]); //get the terms and answers LIST from the local
-        document.getElementById('content_answers').innerHTML = String(storedAnswers[0]);
-        showDivs(slideIndex); //show the first flash card when the page loads
-        function plusDivs(n) {
-            if ((slideIndex+n)>length-1 ||(slideIndex+n)<0){ //if the slideIndex is out of bounds, then continue to show the current card
-              showDivs(slideIndex);
-            }
-            else{ //if the element is not out of bounds, show the new card
-              showDivs(slideIndex += n); //call the navigation function to go to the next card passing in the slideIndex value and n (-1, or 1 depending on buttons pressed)
-            }
-        };
-        function showDivs(n) {
-            document.getElementById('content_terms').innerHTML = String(storedTerms[n]); //update the content of the flash cards (front)
-            document.getElementById('content_answers').innerHTML = String(storedAnswers[n]); //(and back)
-        }
-    </script>
+  </div>
 
+    <script src="js/flashcard.js"></script>
     <body>
 
 </html>
