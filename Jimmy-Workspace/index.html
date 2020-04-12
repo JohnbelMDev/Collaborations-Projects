@@ -5,138 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" -->
-  <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <title>Flash Cards</title>
-  <style>
-    .row {
+  <style media="screen">
+    .button_container {
+      text-align: center
+    }
+    /* for the border content */
+    .outside_container {
       margin: 0 auto;
-    }
-    .w3-display-left {
-      position: absolute;
-      top: 50%;
-      left: 0%;
-      transform: translate(0%, -50%);
-      -ms-transform: translate(-0%, -50%);
-    }
-
-    .w3-display-right {
-      position: absolute;
-      top: 50%;
-      right: 0%;
-      transform: translate(0%, -50%);
-      -ms-transform: translate(0%, -50%);
-    }
-
-    .w3-btn,
-    .w3-button {
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    .w3-btn,
-    .w3-button {
-      border: none;
-      display: inline-block;
-      padding: 8px 16px;
-      vertical-align: middle;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      background-color: inherit;
-      text-align: center;
-      cursor: pointer;
-      white-space: nowrap;
     }
   </style>
 </head>
 <body>
-  <div class="center">
-  <div style="float:left;">
-<!-- something here -->
-<label for="username"><b>First Name</b><span class="required"></span>    </label>
-<input id="user_first_name" name="FirstName" size="50" type="text"     placeholder="Term"  />
-</div>
-
-<div style="float:right;">
-<!-- something here -->
-<label for="name"><b>Last Name</b><span class="required"></span></label>
-<input id="user_last_name" name="LastName" size="50" type="text"     placeholder="answer"/>
-<a href="flashcards.html"><button type="submit" onclick="makeCards();">Submit</button></a>
-
-</div>
-</div>
-
-
-<div style="clear:both"></div>
-
-  <!-- <div style="float:left;">
-    <!-<input id="user_first_name" name="FirstName" size="30" type="text"     placeholder="First"  /> -->
-  <!-- </div> -->
-<!--
-  <div style="float:right;">
-    <label for="name"><b>Last Name*</b><span class="required"></span></label>
-    <input id="user_last_name" name="LastName" size="30" type="text"     placeholder="Last"/>
-  </div> -->
-  <!--<label><b>Full Name </b><span class="required">*</span></label><input     type="text" name="FirstName" class="field-divided" placeholder="First"     style="float:left" />;<input type="text" name="Surname" class="field-divided"     placeholder="Last" style="float:right"/> <p></p>-->
-  <!-- <label><b>Email </b><span class="required">*</span></label><input     type="email" name="Email" class="field-long" placeholder="Email" value="<?php     echo $_POST['Turnover']; ?>" />
-  <label><b>Phone </b><span class="required">*</span></label><input     type="number" name="Phone" class="field-divided" placeholder="Number" />
-  <label style="font-size:10px">only numbers, no special characters</label> -->
-  <!-- <div class="form-group container">
-    <fieldset class="form-group col-xs-6">
-      <div id="card_form">
-        <form id="flashCards">
-          <fieldset class="form-group col-xs-6">
-            <label>Term</label>
-            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Answer</label>
-            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Term</label>
-            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Answer</label>
-            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Term</label>
-            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Answer</label>
-            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Term</label>
-            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Answer</label>
-            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Term</label>
-            <input class="form-control" formControlName="minPower" type="text" placeholder="Term" />
-          </fieldset>
-          <fieldset class="form-group col-xs-6">
-            <label>Answer</label>
-            <input class="form-control" formControlName="maxPower" type="text" placeholder="Answer" />
-          </fieldset>
-        </form>
-        <a href="flashcards.html"><button type="submit" onclick="makeCards();">Submit</button></a>
+<div id="outside">
+  <div class="outside_container">
+    <div class="center">
+      <div style="float:left; width:45%;">
+        <!-- something here -->
+        <label for="username"><b>First Name</b><span class="required"></span> </label>
+        <input id="user_first_name" name="FirstName" size="50" type="text" placeholder="Term" />
       </div>
-    </fieldset>
-  </div> -->
+      <div style="float:right; width:45%;">
+        <!-- something here -->
+        <label for="name"><b>Last Name</b><span class="required"></span></label>
+        <input id="user_last_name" name="LastName" size="50" type="text" placeholder="answer" />
+      </div>
+    </div>
+  </div>
+</div>
+  <div style="clear:both"></div>
+  <div class="button_container">
+    <a href="flashcards.html"><button class="this_button" type="submit" onclick="makeCards();">Submit</button></a>
+    <button class="this_button" type="submit" id="addField">Add Card</button>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var phone_number_form_index=0;
+      $("#addField").click(function(){
+        phone_number_form_index++;
+        $(this).parent().before($("#outside").clone().attr("id","outside" + phone_number_form_index));
+        $("#outside" + phone_number_form_index).css("display","inline");
+        $("#phone_number_form" + phone_number_form_index + " :input").each(function(){
+            $(this).attr("name",$(this).attr("name") + phone_number_form_index);
+            $(this).attr("id",$(this).attr("id") + phone_number_form_index);
+            });
+          });
+        });
+  </script>
   <script src="js/main.js"></script>
 </body>
 
