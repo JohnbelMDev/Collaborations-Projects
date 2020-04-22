@@ -23,13 +23,10 @@ MongoDB download -
 Integrating MongoDB with mongoose
 
 
-Techonology for front end  
-HTML
-CSS
-
-Techonology for back-end 
-JavaScript 
-Nodejs 
+    Techonology for front end  
+       * HTML
+       * CSS
+ 
  
  
  
